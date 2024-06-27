@@ -37,7 +37,7 @@ def get_train_args():
                         help='몇 epoch 마다 validation 수치를 뽑을지')
     parser.add_argument('--print_log_by_iter', type=int, default=50)
     parser.add_argument('--save_log_dir', type=str, 
-                        default=f"./runs/coupangPOC_issue_exp1_{datetime.datetime.now().strftime('%b%d_%H-%M-%S')}")
+                        default=f"test_{datetime.datetime.now().strftime('%b%d_%H-%M-%S')}")
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--model_name', type=str, default='ViT-L/14',
                         help='ViT-B/32, ViT-B/16, ViT-L/14, RN50 입력 가능')

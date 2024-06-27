@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 
 # TODO: depth가 없는 class 분류용 tsne 코드 필요
 def feature2tsne(features, gt_category, gt_status, epoch, tsne_save_dir):
-    # 과일별로 인덱스 추출
     category_indices = {}
     for i, category in enumerate(gt_category):
         if category not in category_indices:
@@ -15,7 +14,6 @@ def feature2tsne(features, gt_category, gt_status, epoch, tsne_save_dir):
         else:
             category_indices[category].append(i)
 
-    # 과일별로 gt_status와 feature 나누기
     category_gt_status = {}
     category_features = {}
     for category, indices in category_indices.items():
